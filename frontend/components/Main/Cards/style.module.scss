@@ -10,6 +10,8 @@
 }
 
 .image{
+    display: flex;
+    justify-content: center;
     span{
         border: 1px solid #000;
         border-radius: 50%;

@@ -34,7 +34,8 @@ export default function RecipeReviewCard(props: Props) {
 
 
     return (
-        <Card sx={{ width: "480px", height: "auto", maxWidth: 750, border: "1px solid var(--border)" }} className={s.card} >
+
+        <Card sx={{ width: "480px", height: "auto", maxWidth: 750, border: "1px solid var(--border)",  boxShadow: "0px 0px 10px  rgba(0,0,0,0.2)", marginTop: "25px" }} className={s.card} >
             <div className={s.header}>
                 <CardHeader
                     avatar={
@@ -53,8 +54,8 @@ export default function RecipeReviewCard(props: Props) {
             </div>
 
 
-            <div>
-                <Image src={props.photo} width={450} height={450} alt="instagram" />
+            <div className={s.image}>
+                <Image src={props.photo} width={400} height={400} alt="instagram" />
             </div>
             <CardActions disableSpacing>
 

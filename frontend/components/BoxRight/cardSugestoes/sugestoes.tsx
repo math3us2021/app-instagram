@@ -22,9 +22,11 @@ export default function index(props: Props) {
           </div>
         }
         action={
-          <IconButton aria-label="settings">
+          <div className={s.seguir}>
+              <IconButton aria-label="settings">
             <p>Seguir</p>
           </IconButton>
+          </div>
         }
         title={props.name}
         subheader={props.subName}

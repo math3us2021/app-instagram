@@ -21,27 +21,14 @@ export default function Home(props: Props) {
   console.log('Função Pai Home'+ isVisivel)
 
 
-  function api() {
-
-    const token = {
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("token")
-      }
-    }
-    axios.get('http://localhost:3333/us', token).then((res) => {
-      console.log(res.data)
-      // console.log(token)
-    }).catch((err) => {
-      console.log("Não foi possível conectar ao servidor")
-    })
-  }
+  
   return (
     <div className={s.external}>
       <div>
         <Menu />
       </div>
       <div className={s.main}>
-      <button onClick={()=> api()} >Api</button>
+      
         <Main handleOpen={handleOpen} />
       </div>
 

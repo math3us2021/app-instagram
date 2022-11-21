@@ -1,10 +1,11 @@
-import React from 'react'
-import s from './style.module.scss'
-import CardHeader from '@mui/material/CardHeader';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import CardSugestoes from './cardSugestoes/sugestoes';
-import { url } from 'inspector';
+import React from "react";
+import s from "./style.module.scss";
+import CardHeader from "@mui/material/CardHeader";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import CardSugestoes from "./cardSugestoes/sugestoes";
+import OutputIcon from '@mui/icons-material/Output';
+import { useRouter } from "next/router";
 
 export const fotoNome = [
   {
@@ -21,26 +22,27 @@ export const fotoNome = [
     name: "Veronica",
     photo: "/3.jpg",
     subName: "Veronica Cruz",
-  }
+  },
 ];
 
 export default function index() {
+
+  const router = useRouter();
+
   return (
     <div className={s.box}>
-      <div> 
-      <CardHeader
-        avatar={
-          <img className={s.foto} src="/matheus.jpeg" alt="" />
-        }
-        action={
-          <IconButton aria-label="settings">
-            <Typography variant="body2" color="text.secondary">Mudar</Typography>
-          </IconButton>
-        }
-        title="Matheusbf"
-        subheader="Matheus Ferreira"
-      />
-       </div>
+      <div>
+        <CardHeader
+          avatar={<img className={s.foto} src="/matheus.jpeg" alt="" />}
+          action={
+            <IconButton aria-label="settings" color="error">
+              <OutputIcon onClick={()=> router.push("/login")} />
+            </IconButton>
+          }
+          title="Matheusbf"
+          subheader="Matheus Ferreira"
+        />
+      </div>
 
       <div>
         <div>
@@ -49,7 +51,11 @@ export default function index() {
         <div>
           {fotoNome.map((item, index) => (
             <div key={index}>
-            <CardSugestoes  photo={item.photo} name={item.name} subName={item.subName} />
+              <CardSugestoes
+                photo={item.photo}
+                name={item.name}
+                subName={item.subName}
+              />
             </div>
           ))}
         </div>
@@ -57,5 +63,5 @@ export default function index() {
 
       <div></div>
     </div>
-  )
+  );
 }
