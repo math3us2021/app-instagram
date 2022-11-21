@@ -1,0 +1,61 @@
+.external {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main {
+  width: 470px;
+  margin-left: 430px;
+  // position: relative;
+  margin-top: 15px;
+}
+
+.boxRight {
+  display: flex;
+  margin-right: 160px;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+  .boxRight {
+    display: none;
+  }
+  .external{
+    justify-content: normal;
+  }
+  .main {
+
+    margin-left:25%;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 768px) {
+  .boxRight {
+    display: none;
+  }
+  .external {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main {
+    display: flex;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .boxRight {
+    display: none;
+  }
+  .external {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main {
+    display: flex;
+    margin-left: 6%;
+  }
+}

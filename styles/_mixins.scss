@@ -1,7 +1,0 @@
-@mixin texto($size: 1rem, $weight: 400, $color: rgb(230, 84, 84)) {
-  font-size: $size;
-  font-weight: $weight;
-  color: $color;
-  @content;
-}
-    

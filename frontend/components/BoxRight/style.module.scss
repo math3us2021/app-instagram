@@ -1,0 +1,44 @@
+.box{
+    width: 400px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    // border: 1px solid var(--border);
+
+    P{
+        color: #8e8e8e;
+        margin-left: 20px;
+    }
+
+    .image {
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        image-rendering: auto;
+        // width: 80px;
+        height: 60px;
+        margin: 10px;
+        p {
+          font-size: 12px;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+    
+        }
+        background-position: center;
+        background-size: cover;
+      }
+    
+      .foto {
+        
+        width: 60px;
+        height: 100%;
+        object-fit: cover;
+        // border: #fff solid 2px;
+        border-radius: 50%;
+      }
+
+}
+
+

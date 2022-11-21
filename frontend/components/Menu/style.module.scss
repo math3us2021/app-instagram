@@ -1,0 +1,102 @@
+
+
+.title {
+  margin-left: 20px;
+}
+
+.box {
+  background-color: #fff;
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+
+
+  @media screen and (max-width: 1260px) {
+    width: 80px;
+    position: fixed;
+
+    img {
+      display: none;
+    }
+   
+  }
+  @media screen and (max-width: 768px) {
+
+    width: 0px;
+    position: relative;
+    div{
+        display: none;
+    }
+
+  }
+}
+
+.buttonMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+
+  p {
+    margin-left: 30px;
+    font-size: medium;
+  }
+
+  @media screen and (max-width: 1260px) {
+    margin-top: 25px;
+    p {
+      display: none;
+    }
+  }
+}
+
+  
+
+@media screen and (max-width: 768px) {
+  .buttonMenu {
+    margin-top: 25px;
+    p {
+      display: none;
+    }
+  }
+}
+    
+
+  
+.menuHorizontal{
+    display: none;
+  }
+
+.input{
+    margin: 5px;
+
+   input{
+    height: 8px;
+    width: 150px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .menuHorizontal{    
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 800px;
+            height: 70px;
+            border: 1px solid rgba(0, 0, 0, 0.342);
+            
+            .input{
+              background-color: #efefef;
+              border: 0px;
+              margin-left: 50px;
+            }
+    }
+    
+  }
